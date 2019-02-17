@@ -1,0 +1,94 @@
+Palindrome
+
+https://medium.freecodecamp.org/two-ways-to-check-for-palindromes-in-javascript-64fea8191fd7
+function checkPalindrom(str) {
+    var str = str.replace(/[^a-zA-Z0-9]+/gi, '').toLowerCase();
+    return str == str.split('').reverse().join('');
+}
+
+function checkPalindrom(str) {
+    return str == str.split('').reverse().join('');
+}
+
+function Palindrome3(){
+    for(var i=0;i<str.length;i++){
+        reverse = reverse + str.split().pop();
+    }
+    if(reverse === str){
+    console.log("Palindomre");
+
+}
+
+Property Access
+
+ECMAScript 5 (2009) allows property access [ ] on strings:
+Example
+var str = "HELLO WORLD";
+str[0];                   // returns H
+Property access might be a little unpredictable:
+It does not work in Internet Explorer 7 or earlier
+It makes strings look like arrays (but they are not)
+If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+It is read only. str[0] = "A" gives no error (but does not work!)
+Example
+var str = "HELLO WORLD";
+str[0] = "A";             // Gives no error, but does not work
+str[0];                   // returns H
+If you want to work with a string as an array, you can convert it to an array.
+function declaration vs function expression
+https://medium.com/@mandeep1012/function-declarations-vs-function-expressions-b43646042052
+ES6
+for in vs for of
+https://www.youtube.com/watch?v=bDt--Mtj094
+https://www.youtube.com/watch?v=a3KHBqH7njs&t=11s
+lets learn by ryan chritiani
+
+
+     http://javascriptissexy.com/
+
+      OOPS
+     http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/
+
+   ways to create objects
+   https://stackoverflow.com/questions/6843951/which-way-is-best-for-creating-an-object-in-javascript-is-var-necessary-befor
+    https://www.w3schools.com/js/js_object_definition.asp
+
+1.object literals
+
+http://www.dyn-web.com/tutorials/object-literal/
+http://www.dyn-web.com/tutorials/object-literal/properties.php
+https://www.w3schools.com/js/js_objects.asp
+
+2.obj new contructor
+
+protoptype vs Constructor
+https://stackoverflow.com/questions/28600238/trying-to-understand-the-difference-between-prototype-and-constructor-in-javascr
+http://www.htmlgoodies.com/beyond/javascript/object.create-the-new-way-to-create-objects-in-javascript.html
+
+js prototype..prototype vs __proto__
+http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/
+
+
+Closures
+http://javascriptissexy.com/understand-javascript-closures-with-ease/
+
+this
+http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
+https://toddmotto.com/understanding-the-this-keyword-in-javascript/
+
+.call vs .apply
+https://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/
+
+.bind method
+https://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
+
+curry a function
+https://www.sitepoint.com/currying-in-functional-javascript/
+
+function expression vs declaration
+https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+
+hoisting
+https://scotch.io/tutorials/understanding-hoisting-in-javascript
+

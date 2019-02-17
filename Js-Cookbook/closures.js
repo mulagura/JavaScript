@@ -1,0 +1,117 @@
+                        // closures
+// https://hackernoon.com/how-to-use-javascript-closures-with-confidence-85cd1f841a6b                        
+
+// A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain
+// Closure is when a function is able to remember and access the variables of the outer (enclosing) function 
+  //even when that function is executing outside its scope.
+// it has three scope chains: its own scope, outer function and global variables.
+
+let globalVariable = 'I am global';
+
+function outer(){
+
+    let outerFuncVariable = 'i am outer function variable';
+
+    function inner(){
+        let innerFuncVariable = 'i am inner function variable';
+
+        console.log(`global:${globalVariable} , outer function:${outerFuncVariable} , inner function:${innerFuncVariable}`);
+    }
+    inner();
+
+}
+
+outer(); // global:I am global , outer function:i am outer function variable , inner function:i am inner function variable
+
+// The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters
+  // Note that the inner function cannot call the outer function’s arguments object
+
+    function math(a,b){
+        console.log(arguments); // Arguments(2) [1, 2, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+        function sum(c,d){
+            console.log(arguments); // Arguments(2) [3, 4, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+            console.log(`parameters:${a},${b},${c},${d} and their sum:${a+b+c+d}`);
+        }
+        sum(3,4);
+    }
+    math(1,2) // parameters:1,2,3,4 and their sum:10
+
+// Closures or inner functions have access to the outer function’s vars and parameters even after the outer function returns
+
+
+function myFunction(number1) {
+	
+	function add(number2) {
+		
+		return number1 + number2;
+	}
+    
+    return add;
+    
+    	/* Note that when you return a function without the (), 
+	you are returning the function definition, you are not calling 
+    the function to execute. This allows you to call the function later.*/
+}
+
+console.log(myFunction()); //  ƒ add(number2) { return number1 + number2; }
+
+var callInner = myFunction(1);
+console.log(callInner(2)); // 3
+
+// or 
+console.log(myFunction(1)(2)); // 3
+
+
+// .......
+
+var start = 5; // global
+
+function sum(a){
+    return function(b){ // anonymous function
+        return function(c){
+            return function(d){
+                return a+b+c+d+start;
+            }
+        }
+    }
+}
+
+console.log(sum(1)(2)(3)(4)); // 15
+
+
+// var vs let scoping in closures
+
+for(var a=0;a<5;a++){
+    console.log(a); // 0 1 2 3 4
+}
+console.log(a);// 5
+
+for(var i=0;i<3;i++){
+    setTimeout(()=>{
+        console.log(i); // 3 3 3   
+    },1000);
+}
+
+for(let j=0;j<3;j++){
+    setTimeout(()=>{
+        console.log(j); // 0 1 2   
+    },1000);
+}
+
+/*
+
+(function timer() {
+  for (var i=0; i<=5; i++) {
+    setTimeout(function clog() {console.log(i)}, i*1000);
+  }
+})();
+You can imagine the compiler goes like this inside the for loop
+
+ setTimeout(function clog() {console.log(i)}, i*1000); // first iteration, remember to call clog with value i after 1 sec
+ setTimeout(function clog() {console.log(i)}, i*1000); // second iteration, remember to call clog with value i after 2 sec
+setTimeout(function clog() {console.log(i)}, i*1000); // third iteration, remember to call clog with value i after 3 sec
+and so on
+
+since i is declared using var, when clog is called, the compiler finds the variable i in the nearest function block which is timer and since we have already reached the end of the for loop, i holds the value 6, and execute clog. That explains 6 being logged six times.
+
+*/
