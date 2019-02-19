@@ -1,6 +1,7 @@
 // map()
 // does not affect the original array
 // gives new array and return statement would be good
+// .map() when you want to transform elements in an array.
 
 var evenNumbers = [2,4,6,8,10];
 var names = ['johnny depp','cage','aston','charlie','penny','sheldon'];
@@ -12,12 +13,12 @@ console.log(squaRoot); // [ 1.4142135623730951,2,2.449489742783178,2.82842712474
 console.log(evenNumbers); // [2,4,6,8,10]
 
 var nameChange = names.map((name,index)=>{
-        return index+"name";
+        return "name-"+index+" "+name;
 });
-console.log(nameChange); // [ '0name', '1name', '2name', '3name', '4name', '5name' ]
+console.log(nameChange); // [ 'name-0 johnny depp', 'name-1 cage', ... ]
 console.log(names); // ['johnny depp','cage','aston','charlie','penny','sheldon']
 
-// VS
+// map VS forEach
 // https://codeburst.io/javascript-map-vs-foreach-f38111822c0f
 // https://stackoverflow.com/questions/34426458/javascript-difference-between-foreach-and-map
 
@@ -29,6 +30,11 @@ console.log(names); // ['johnny depp','cage','aston','charlie','penny','sheldon'
 var foreach = names.forEach((n,i)=>{
     return i+"names";
 });
+
+// to return in forEach
+/* arr.forEach((num, index) => {
+    return arr[index] = num * 2;
+}); */
 
 console.log(names); // [ 'johnny depp', 'cage', 'aston', 'charlie', 'penny', 'sheldon' ]
 console.log(foreach); // undefined
