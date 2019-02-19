@@ -1,8 +1,8 @@
                                  // variables ( var, let, const )
                                
 // const variableName;  
-   // use const when variable value does not need to be changed.
 
+   // use const when variable value does not need to be changed.
    // const are immutable for primitive values ; mutable for non-primitive values like objects, array type objects.
 
    const BIKE = {
@@ -31,7 +31,7 @@ console.log(YEARS); //   [2010, 2012, undefined, 2015, 2016, 2018]
    // const cannot be redeclared;
 
    const Z = 'I Love Amul';
-   /* Z = 'I dont love anymore';
+    Z = 'I dont love anymore';
    console.log(z); // Assignment to constant variable  
    const Z = 220;
    console.log(Z); // dentifier 'Z' has already been declared */
@@ -41,23 +41,29 @@ console.log(YEARS); //   [2010, 2012, undefined, 2015, 2016, 2018]
        model:'rapid',
        budget:10
    };
+
+   CAR.title = "Cars";
+
+   /* CAR.title = "Cars" ;   is allowed  ; immutability binding */
+   /* CAR.make = "Honda" ;   is also allowed */
+
+   CAR.make = "Honda";
+
+   console.log(CAR); // { make: 'Honda', model: 'rapid', budget: 10, title: 'Cars' }
+   
  
-   /* const CAR = {};
+   const CAR = {};
    console.log(CAR); // Identifier 'CAR' has already been declared */
 
    //const PI = 3.14;
 //      PI = 3.15;
 //console.log(PI); // Uncaught TypeError: Assignment to constant variable 
 
-  
-   
-   // JS primitives are always immutable though. Whether you use const or not doesn't affect that
-
    // unlike var; Variables defined with const are not hoisted to the top.
 
-    /*  BIKE_NAME = "Honda";    // You can NOT use BIKE_NAME here
-const BIKE_NAME = "Honda";
-console.log(BIKE_NAME); // Uncaught ReferenceError: BIKE_NAME is not defined  */ 
+    /*  console.log(BIKE_NAME);    
+         const BIKE_NAME = "Honda";
+        console.log(BIKE_NAME); // Uncaught ReferenceError: BIKE_NAME is not defined  */ 
 
 
    // A const variable cannot be used before it is declared
@@ -66,17 +72,16 @@ console.log(BIKE_NAME); // Uncaught ReferenceError: BIKE_NAME is not defined  */
    // Global constants do not become properties of the window object, unlike var variables.
    // An initializer for a constant is required;  you must specify its value in the same statement in which it's declared
 
-
-
-carName = "Volvo";  
-var carName;
-console.log(carName); // Volvo
+  /* const LOVE;
+   LOVE = 20;
+   console.log(LOVE); // SyntaxError: Missing initializer in const declaration
+   */
 
 
 
 // let is block scoped like const
 
-// let cannot be accessed before declaration 
+// let cannot be hoisted 
 // let cannot be redeclared.
 // let can be reassigned
 let y = 'Mulagura';
@@ -89,10 +94,10 @@ console.log(y); // Identifier 'y' has already been declared  */
 // At the top level of programs and functions,
    // let, unlike var, does not create a property on the global object
 
-   var x = 'global';
-let y = 'global';
+var x = 'global';
+//let y = 'global';
 console.log(this.x); // "global"
-console.log(this.y); // undefine
+console.log(this.y); // undefined
 
 
 //var vs let;
@@ -109,10 +114,23 @@ console.log(this.y); // undefine
 
   // var variableName; -> declaration
   //     variableName = 'Mulagura';  -> initialize or Assignment
-  
-  var x = 10;
-  var x = 'ram';
-  console.log(x); // ram
 
-    
   // var is function scoped
+
+// // //  VS 
+
+//var simpleVar = 10;
+//creates a global variable, can access using: Window.simpleVar
+// function foo(){}; also creates on global/window level, can access using Window.foo()
+
+// use let or const to avoid global scoping and function expressions using let to avoid global functions
+
+// let and const cannot be redeclared
+// var,let can be re-assigned; const having immutable binding
+
+// let and const can't be hoisted
+
+// var is function scoped; where let and const are block-level scoped
+
+// const value should be initialized
+// var and let doesn't throw error if not initialized 
