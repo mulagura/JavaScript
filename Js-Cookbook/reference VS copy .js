@@ -1,13 +1,18 @@
-     // refernce vs copy    
+                            // refernce vs copy    
  
 // https://www.youtube.com/watch?v=YnfwDQ5XYF4
 
-//  JavaScript uses by value for primitive types and by reference for objects
+// JavaScript uses by value for primitive types and by reference for objects.
+
 // Every variable representing a primitive value is guaranteed to belong to a unique memory location
    // This means none of the variables will ever point to the same memory address. 
-// Array, Function, and Object are passed by refernce   
 
-// strings,numbers, boolean (it will make copy for primitive values)
+// Array, Function, and Objects are passed by refernce and points same memory allocation
+
+// Primitive values(string,number,boolean,null,undefined) --> makes copy / by value
+// Non-primitive values ( objects,array, functions )      --> points same memory allocation / by refernce
+
+// strings,numbers,boolean (it will make copy for primitive values)
 
      let a = 'Mulagura';
      let b = 24;
@@ -55,6 +60,7 @@ NUM[6] = 7;
 //3. spread operator(...args)
      const CPY3_NUM = [...NUM];
 //4. Array.from()
+     // method creates a new, shallow-copied Array instance from an array-like or iterable object.
      const CPY4_NUM = Array.from(NUM);
      console.log(NUM,CPY4_NUM); // (7) [1, 2, 3, 4, 5, 6, 7] (7) [1, 2, 3, 4, 5, 6, 7]
         
@@ -85,7 +91,9 @@ cfo.age = 45;
 
 console.log(employee,cfo); // {name: "Ram", age: 24, band: false} {name: "Ram", age: 45, band: false}
 
-//2. Object.assign({},obj,{});
+//2. Object.assign(target, ...sources);
+    //  copy the values of all enumerable own properties from one or more source objects to a target object.
+    //  It will return the target object
 
 let coo = Object.assign({},employee,{age:40});
 
@@ -94,4 +102,3 @@ console.log(employee,coo); // {name: "Ram", age: 24, band: false} {name: "Ram", 
 // this is shallow way of doing not deep copy; lets say object has another object inside { {} } , the inner will be again refernce not a copy; to do whole copy we should iterate and do
 // this is only one level deep; both for arrays and objects
 // lodash has cloneDeep method; JSON.parse(JSON.stringify)
-
