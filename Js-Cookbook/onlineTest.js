@@ -38,3 +38,56 @@ for(var j=0;j<b.length;j++){
 
 console.log(c);
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        TEST
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+
+
+
+</body>
+<script>
+    var a = [1, 4, 6, 8, 9, 2, 5, 7, 3];
+    // var set = new Set(a);
+    // console.log(set);
+    console.time("loop1Way");
+    console.log(a.sort((a, b) => a - b));
+
+    for (var i = 1; i <= 10; i++) {
+
+        if (a[i - 1] !== i) {
+            console.log('missing NUMBER IS:' + i);
+        }
+
+    }
+    console.timeEnd("loop1Way");
+
+    console.time("secondWay");
+    var aLength = a.length;
+    var sum = 0;
+    for (var i = 0; i < aLength; i++) {
+        sum = sum + a[i];
+    }
+    //console.log(sum);
+
+    var aSum = ( aLength * (aLength +1) ) /2;
+    var sumShouldBe = 55;
+    console.log("missing number is:"+ (sumShouldBe-aSum) );
+     
+    console.timeEnd("secondWay");
+
+
+</script>
+
+
+</html>
+
