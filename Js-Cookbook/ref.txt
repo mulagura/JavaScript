@@ -92,3 +92,306 @@ https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-funct
 hoisting
 https://scotch.io/tutorials/understanding-hoisting-in-javascript
 
+....................................JS Interview practice.....................................................
+.............................................................................................................
+..........................................................................................................
+
+// https://www.maxpou.fr/js-exercises-explained
+// https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29
+// https://github.com/h5bp/Front-end-Developer-Interview-Questions
+// https://github.com/khan4019/front-end-Interview-Questions
+// https://github.com/kennymkchan/interview-questions-in-javascript
+// https://www.toptal.com/javascript/interview-questions
+// https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z
+// https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions
+// https://www.interviewcake.com/javascript-interview-questions
+
+
+// 1. Write a function that will loop through a list of integers
+   // and print the index of each element after a 3 second delay. 
+
+(function printIndex(){
+    for(let i=0;i<10;i++){
+        setTimeout(()=>{
+            console.log(i);
+        },3000);
+    }
+})();
+
+/*or */
+
+(function printIndex(){
+    for(var i=0;i<10;i++){
+        function display(j){
+            setTimeout(()=>{
+                console.log(j);
+            },3000);
+        }
+        display(i);
+    }
+})();
+
+// 2. I want this code to log “hey amy”, but it logs “hey arnold” - why?
+
+function greet (person) {
+    if (person == { name: 'amy' }) {
+      console.log( 'hey amy');
+    } else {
+        console.log( 'hey arnold');
+    }
+  }
+  greet({ name: 'amy' });
+// Here the problem is the following: { name: 'amy' } != { name: 'amy' }. 
+  //When comparing two objects with equality or strict equality, 
+  //JavaScript gonna compare the related internal references. 
+  //Here, these two objects have the same properties and the same value. 
+  //But in memory, this is 2 different objects.  
+ 
+  function greet (person) {
+    if (person.name === 'amy') {
+      return 'hey amy'
+    }
+    return 'hey arnold'
+  }
+  greet({ name: 'amy' }) // "hey amy"
+
+// 3. I want this code to log out “doggo”, but it logs out undefined!  
+let dog = {
+    name: 'doggo',
+    sayName () {
+      return this.name;
+    }
+  }
+  let sayName = dog.sayName
+  console.log(sayName()); // undefined
+  // we need to bind the dog the context on it
+  console.log(sayName.bind(dog)()); // doggo
+
+// 4. 
+function isBig (thing) {
+  if (thing == 0 || thing == 1 || thing == 2) {
+    return false
+  }
+  return true
+}
+isBig(1)    // false
+isBig([2])  // false
+isBig([3])  // true
+
+// When comparing an array to a number, the array will be converted to a number.
+ //if we compare a number with an Object (reminder: arrays are object in JS), 
+ //this array will be converted to an array. Here, there is only one item inside so [2] == 2.
+ 
+// 5. isPrime - Returns true or false, indicating whether the given number is prime.
+// 6. set of numbers wether it is prime or not: eg. 2:prime,3:not a prime,...
+
+..................................readme file..................................................
+.........................................................................................
+.......................................................................................
+
+Whole Web Development
+https://developer.mozilla.org/en-US/docs/Web/Tutorials
+
+# Js-Cookbook
+Whole JavaScript Programs
+even and odd
+swap two numbers
+sum of digits in a given number
+Fibonacci
+Triangle of star
+Palindrome, palindromic numbers with less than n
+Armstrong
+prime number
+sorting
+search
+Array of objects in a array
+remove duplicates in array/string
+..
+indexOf,lastIndexOf //string and array
+https://www.youtube.com/watch?v=xdziI2avnZ4
+push,pop,shift,unshift
+
+JS Arrays
+https://www.youtube.com/watch?v=arIhhRd1RPc&list=PLyuRouwmQCjnupe_ohQgFvwFZF8dycwK8
+
+string methods
+https://www.youtube.com/watch?v=VRz0nbax0uI
+array methods
+https://www.youtube.com/watch?v=MeZVVxLn26E
+
+Programming
+https://www.w3resource.com/javascript-exercises/
+https://coderbyte.com
+
+set
+https://www.youtube.com/watch?v=mzlIYyY6he4
+
+ES6
+The net Ninja(regex and stuff)
+window object vs document object
+http://eligeske.com/jquery/what-is-the-difference-between-document-and-window-objects-2/
+primitive vs non-primitive
+https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0
+bracket vs dot notation
+https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781
+seal vs freeze vs preventExtensions
+https://github.com/piecioshka/test-freeze-vs-seal-vs-preventExtensions
+
+box-sizing:border-box
+https://www.youtube.com/results?search_query=box+sizing+border+box+css
+
+Algorithms:
+https://towardsdatascience.com/top-algorithms-and-data-structures-you-really-need-to-know-ab9a2a91c7b5
+linear serach , binary search, deapth first search, breadth first search
+bubble sort, merge sort, quicksort
+
+..................................ref links...................................................................
+.............................................................................................................
+............................................................................................
+
+// basic tutorial reference 46 videos
+https://www.youtube.com/watch?v=s6R0VEdoVt4&index=1&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K
+
+//full reference
+   https://developer.mozilla.org/bm/docs/Web/JavaScript
+
+  What is Js?
+   JS is Lightweight( small memory and easy to implement ),Interpreted( No compilation.Instructions Executes directly ),
+   O-O ,first-class functions( where functions can be used as values ),scripting Language.
+
+
+   // JS as O-O
+      https://www.youtube.com/watch?v=rlLuL3jYLvA
+      https://www.youtube.com/watch?v=Q-sP71DgKK0
+      http://viralpatel.net/blogs/object-oriented-programming-with-javascript/
+
+
+// Programming vs Scripting Language
+https://www.geeksforgeeks.org/whats-the-difference-between-scripting-and-programming-languages/
+
+
+// DOM
+  https://www.digitalocean.com/community/tutorials/introduction-to-the-dom
+
+
+//declaration,intialization/definition and assigning
+   https://teamtreehouse.com/community/what-is-the-difference-between-declaring-a-variable-and-initializing-a-variable
+
+//    assigning: throwing away the old value of a variable and replacing it with a new one
+//
+// initialization / definition: it's a special kind of assignment: the first. Before initialization objects have null value and primitive types
+//                 have default values such as 0 or false. Can be done in conjunction with declaration.
+//
+// declaration: a declaration states the type of a variable, along with its name. A variable can be declared only once.
+//              It is used by the compiler to help programmers avoid mistakes such as assigning string values to integer variables.
+//              Before reading or assigning a variable, that variable must have been declared.
+
+//undefined
+  if you declare a variable but not assigned then its value is undefined of type undefined.
+
+//null
+    typeof null === 'object'; // This stands since the beginning of JavaScript
+    A "fix" was proposed for ECMAScript (via an opt-in). It would have resulted in:
+
+    typeof null === 'null'
+    ... but this change was rejected, due to issues with code using this specific "quirk" to test for null.
+
+
+    // ways to create objects
+     https://stackoverflow.com/questions/6843951/which-way-is-best-for-creating-an-object-in-javascript-is-var-necessary-befor
+      https://www.w3schools.com/js/js_object_definition.asp
+
+  //1.object literals
+
+  http://www.dyn-web.com/tutorials/object-literal/
+  http://www.dyn-web.com/tutorials/object-literal/properties.php
+  https://www.w3schools.com/js/js_objects.asp
+
+  //2.obj new contructor
+
+//  protoptype vs Constructor
+  https://stackoverflow.com/questions/28600238/trying-to-understand-the-difference-between-prototype-and-constructor-in-javascr
+  http://www.htmlgoodies.com/beyond/javascript/object.create-the-new-way-to-create-objects-in-javascript.html
+
+  //js prototype..prototype vs __proto__
+  http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/
+
+
+  //Closures
+  http://javascriptissexy.com/understand-javascript-closures-with-ease/
+
+  //this
+  http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
+  https://toddmotto.com/understanding-the-this-keyword-in-javascript/
+
+  //.call vs .apply
+  https://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+
+  //.bind method
+  https://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
+
+  //curry a function
+  https://www.sitepoint.com/currying-in-functional-javascript/
+
+  //function expression vs declaration
+  https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+
+  //hoisting
+  https://scotch.io/tutorials/understanding-hoisting-in-javascript
+
+  //map,reduce,filter
+
+  //forEach
+
+  //arrow functions
+
+  //cors
+https://www.codecademy.com/articles/what-is-cors
+
+//scope of a variable,let,const
+
+//JWT
+https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec
+https://jwt.io/introduction/
+
+// Auth0 and AuthGuard
+https://www.youtube.com/watch?v=i_dHFvi1BJc&list=WL&index=2&t=1471s
+
+https://www.codeproject.com/Articles/1203649/MEAN-Stack-with-Angular-Auth-Auth-JWT-Authoriza
+
+
+https://medium.com/beginners-guide-to-mobile-web-development/everything-you-need-to-know-about-es6-arrow-functions-and-lexical-this-19cce1a49bdf
+
+https://tylermcginnis.com/arrow-functions/
+
+https://toddmotto.com/es6-arrow-functions-syntaxes-and-lexical-scoping/
+
+https://derickbailey.com/2015/09/28/do-es6-arrow-functions-really-solve-this-in-javascript/
+
+https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26
+
+psudo classes pseudoelemnts
+inline inline block
+display
+position
+order of css
+css mediaqueries
+shadow dom in angular
+viewEncapsuation in angular
+normalize css vs reset css
+singleton in js ---- 
+event bubbling delegation event binding
+es6 features
+css float
+css box model
+why typescript than js
+life cycle hooks --> ngOnDestroy()
+html vs html5
+canvas svg
+forms in angular4
+http codes
+ts public private
+compile vs run time errors,, differnt types
+
+
+js arrays steve griffith
