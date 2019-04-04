@@ -395,3 +395,89 @@ compile vs run time errors,, differnt types
 
 
 js arrays steve griffith
+
+
+
+// no. of ways a word can be arranged is: n!; where n is length of string
+// SUN 3! -> 3*2 = 6 -> SUN SNU UNS USN NSU NUS
+
+
+const STR = "BONE";
+
+function combinations(str){
+    //console.log(s);
+    var strLength = str.length;
+
+    function reverse(rev){
+        var LetterReverse = rev.split('').reverse().join('');
+        return LetterReverse;
+    }
+
+    if(strLength<=1){
+        console.log("Possible ways of arranging a string is:"+str);
+    }
+    else if (strLength===2) {
+        console.log("Possible ways of arranging a string is:"+str + " " + reverse(str));
+    } 
+    else{
+        var result = [];
+        var partialResult = [];
+        for(var i=0;i<strLength;i++){
+
+            var firstLetter = str[i];
+            console.log("first"+firstLetter);
+            
+            var otherLetters = str.substring(0,i) + str.substring(i+1); // 0+1 
+            console.log("other"+otherLetters);
+            
+            var reverseOther = reverse(otherLetters);
+            console.log(reverseOther);
+
+            partialResult.push(firstLetter+otherLetters);
+            partialResult.push(firstLetter+reverseOther);
+            
+ 
+        }
+        console.log(partialResult);
+        console.log(partialResult.length);
+    }
+    
+};
+
+combinations(STR);
+
+
+// console.time("combo");
+
+// function getPermutations(string) {
+//     var results = [];
+
+//     if (string.length === 1) 
+//     {
+//       results.push(string);
+//       console.log("results if ==="+results);
+//       return results;
+//     }
+
+//     for (var i = 0; i < string.length; i++) 
+//     {
+//       var firstChar = string[i];
+//       console.log("firstChar"+firstChar);
+//       var otherChar = string.substring(0, i) + string.substring(i + 1);
+//       console.log("otherChar"+ i + otherChar);
+//       var otherPermutations = getPermutations(otherChar);
+//       console.log("otherPermutations"+otherPermutations);
+//       for (var j = 0; j < otherPermutations.length; j++) {
+//         results.push(firstChar + otherPermutations[j]);
+//         console.log("results j"+ j + results);
+//       }
+//     }
+//     console.log("final result"+results);
+//     return results;
+//   }
+  
+//   var permutation = getPermutations('YES');
+//   console.log("Total permutation: "+permutation.length);
+//   console.log(permutation);
+
+//   console.timeEnd("combo")
