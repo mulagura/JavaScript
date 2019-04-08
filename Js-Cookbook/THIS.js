@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=gvicrj31JOM
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 // this ---> The JavaScript context object in which the current code is executing.
 // 'this' refers to the object that is executing current function/method
