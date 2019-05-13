@@ -481,3 +481,38 @@ combinations(STR);
 //   console.log(permutation);
 
 //   console.timeEnd("combo")
+....................
+    const a = [
+        {id:"nidhi",company:"SIS"},
+        {id:"Aman",company:"Apple"},
+        {id:"nomen",company:"google"}
+    ];
+
+    const b = [
+        {id:"nidhi",position:"UI"},
+        {id:"Ram",position:"FE"},
+        {id:"laxman",position:"Full Stack"}
+    ];
+
+    //o/p: [ {id:"nidhi",company:"SIS",position:"UI"},{id:"Aman",company:"Apple",position:null},
+    //         {id:"Ram",company:null,position:"FE"},.... ]
+
+    // should be const c;
+    // check with id's, if same merge two objects
+
+    const c = [];
+    var aLength = a.length;
+    for(var i=0;i<aLength;i++){
+        if(a[i].id === b[i].id){
+
+            c.push( {id:a[i].id,company:a[i].company,position:b[i].position} );
+        }
+        else{
+            c.push( {id:a[i].id,company:a[i].company?a[i].company:null,position:a[i].position?a[i].position:null},
+            {id:b[i].id,company:b[i].company?b[i].company:null,position:b[i].position?b[i].position:null} );    
+        }
+    }
+
+    console.log(c);
+    
+
