@@ -272,7 +272,10 @@ https://www.geeksforgeeks.org/whats-the-difference-between-scripting-and-program
 
 // DOM
   https://www.digitalocean.com/community/tutorials/introduction-to-the-dom
-
+  // BOM
+  https://www.w3schools.com/js/js_window.asp
+// console
+https://www.freecodecamp.org/news/how-to-get-the-most-out-of-the-javascript-console-b57ca9db3e6d/
 
 //declaration,intialization/definition and assigning
    https://teamtreehouse.com/community/what-is-the-difference-between-declaring-a-variable-and-initializing-a-variable
