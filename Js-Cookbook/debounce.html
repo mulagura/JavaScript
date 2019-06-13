@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Debounce Method </title>
+</head>
+
+<body>
+    <input type="text" onkeyup="betterFunc()">
+</body>
+<script>
+
+var counter = 0;
+
+    function getData(){
+        
+        console.log('fetching data...',counter++);
+    }
+
+    function deBounce(fn,delay){
+
+        console.log('in debounce');
+        console.log(delay);
+        
+        var timer;
+
+        return function(){
+            console.log('inside return');
+            
+            var that = this;
+            var args = arguments;
+
+            clearTimeout(timer);
+
+             timer = setTimeout(()=>{
+                fn.apply(that,args);
+            },delay);
+
+        }
+    }
+
+    function betterFunc(){
+        console.log('in betterFunc');
+        
+        deBounce(getData,300);
+    }
+
+</script>
+</html>
