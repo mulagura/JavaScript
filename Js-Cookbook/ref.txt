@@ -488,3 +488,6 @@ combinations(STR);
     }
 
     console.log(c);
+    
+    // generate random numbers between two numbers
+    https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript?rq=1
