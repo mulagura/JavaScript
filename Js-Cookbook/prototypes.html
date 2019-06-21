@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> OOPS </title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+<!-- ref: https://www.youtube.com/playlist?list=PLqq-6Pq4lTTaflXUL0v3TSm86nodn0c_u -->
+
+</body>
+<script>
+
+function Constructorfunc(x,y){
+    this.x = x;
+    this.y = y;
+    console.log("/ is :->",x/y);
+}    
+
+var firstDiv = new Constructorfunc(100,500);
+var secondDiv = new Constructorfunc(1,20);
+
+Constructorfunc.div = function(){
+    return 'div';
+};
+
+Constructorfunc.prototype.by = function(){
+    return `by is :-> ${3/2}`;
+};
+
+firstDiv.division = function(){
+    return `div vision`;
+}
+
+firstDiv.__proto__.divide = function(){
+    return `dunder proto divide is${1/1}`;
+}
+
+
+console.log(Constructorfunc.prototype === firstDiv.__proto__); // true
+
+// function
+console.log(Constructorfunc.div()); // division
+ // console.log(Constructorfunc.prototype.div()); // Uncaught TypeError: Constructorfunc.prototype.div is not a function
+console.log(Constructorfunc.prototype.by()); // by is :-> 1.5
+// console.log(Constructorfunc.by()); // test.html:54 Uncaught TypeError: Constructorfunc.by is not a function
+
+//obj
+console.log(firstDiv.division()); // div vision
+//console.log(firstDiv.__proto__.division()); // test.html:58 Uncaught TypeError: firstDiv.__proto__.division is not a function
+console.log(firstDiv.divide()); // dunder proto divide is1
+console.log(firstDiv.__proto__.divide()); // dunder proto divide is1
+
+// access constrctr func in obj
+//console.log(firstDiv.div()); // Uncaught TypeError: firstDiv.div is not a function
+//console.log(firstDiv.__proto__.div()); // Uncaught TypeError: firstDiv.__proto__.div is not a function
+
+console.log(firstDiv.by()); // by is :-> 1.5
+console.log(firstDiv.__proto__.by()); //by is :-> 1.5
+
+
+
+console.log(firstDiv.__proto__.constructor); // Constructorfunc
+console.log(Constructorfunc.prototype.constructor); // Constructorfunc
+
+var obj1 = {};
+var obj2 = new Object();
+
+// obj1 and obj2 are same; obj1 way of doing is simpler
+
+console.log(obj1.__proto__ === obj2.__proto__);
+console.log(obj1.__proto__.constructor === Object.prototype.constructor);
+
+
+
+// multi level inheritance
+
+function Employee(name){
+    this.name = name;
+}
+
+Employee.prototype.Display = function(){
+    return this.name;
+}
+
+
+var emp1 = new Employee('shiva');
+
+function Manager(name,dept){
+    this.dept = dept;
+    this.name = name;
+}
+
+var emp2 = new Manager('BITCHE');
+
+
+console.log(emp1.Display()); // shiva
+console.log(emp2.__proto__.__proto__ === Object.prototype); // true
+console.log(Employee.prototype.__proto__ === Object.prototype); // true
+
+
+emp2.__proto__.__proto__ = Employee.prototype;
+
+console.log(emp2.Display()); // BITCHE
+
+
+var num1 = 4;
+var num2 = 10;
+
+
+var randomNum1 =  Math.round( Math.random() * 10  ); // between 0-10
+var randomNum2 =  Math.round( Math.random() * 10  ) + 1 ; // between 1-10
+
+// between 4 and 10
+
+function randomBetween(num1,num2){
+    var between = Math.round( Math.random() * (num2-num1+1) + num1 );
+    return between;
+}
+
+console.log(randomNum1);
+console.log(randomNum2);
+
+console.log(randomBetween());
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
