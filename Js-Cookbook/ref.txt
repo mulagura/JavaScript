@@ -491,3 +491,6 @@ combinations(STR);
     
     // generate random numbers between two numbers
     https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript?rq=1
+    
+    //
+    https://stackoverflow.com/questions/2958841/how-to-loop-through-key-value-object-in-javascript
