@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> trickle down, bubble up </title>
+</head>
+<style>
+div{
+    min-width: 100px;
+    min-height: 100px;
+    padding: 30px;
+    border: 1px solid green;
+}
+
+div#gparent{
+    background-color: blueviolet;
+}
+
+div#parent{
+    background-color: brown;
+}
+
+div#child{
+    background-color: burlywood;
+}
+</style>
+<body>
+
+    <span onclick="displayDiv()">
+        Hi i am span
+        <ul onclick="displayUl()"> I am ul
+            <li onclick="displayTea();event.stopPropagation()"> Tea </li>
+            <li> Coffee </li>
+        </ul>
+    </span>
+
+    <div id="gparent">
+        <div id="parent">
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- https://stackoverflow.com/questions/5299740/stoppropagation-vs-stopimmediatepropagation -->
+    <!-- https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing -->
+    <!-- https://www.youtube.com/watch?v=aVSf0b1jVKk&list=PLlasXeu85E9eLVlWFs-nz5PKXJU4f7Fks&index=5 -->
+    
+</body>
+
+<script>
+
+function displayTea(){
+
+    var totalTea = prompt('how many tea\'s required ?');
+
+    var confirmTea = confirm(totalTea + ' ' + 'tea, are you sure !');
+
+    if(confirmTea === true){
+        console.log('confirmed tea\'s are :' + totalTea);
+    }  
+}
+
+function displayDiv(){
+    alert('clicked on div');
+}
+
+function displayUl(){
+    alert('cliked on ul');
+}
+
+
+// second div scenario
+
+var grand = document.querySelector('#gparent').addEventListener('click',(event)=>{
+
+    alert('grand parent');
+
+},false);  // by default false; {capture:false} 
+
+var grand = document.querySelector('#parent').addEventListener('click',(event)=>{
+
+    alert('parent');
+    event.stopImmediatePropagation();
+    // if  event.stopPropagation(); -> alerts two events
+    // that's why event.stopImmediatePropagation(); -> alerts only that event
+
+}); 
+
+var grand = document.querySelector('#parent').addEventListener('click',(event)=>{
+
+alert('another event handler for parent');
+
+}); 
+
+var grand = document.querySelector('#child').addEventListener('click',(event)=>{
+
+    alert('child')
+
+    event.stopPropagation();
+
+}); 
+
+
+</script>
+
+</html>
