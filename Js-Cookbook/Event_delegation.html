@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> event delegation </title>
+</head>
+<style>
+
+    /* *{
+        padding: 0;
+        margin: 0;
+    } */
+
+    .pText{
+        background-color: grey;
+    }
+
+</style>
+
+<body>
+
+    <p class="pText"> some unordered list are follows: </p>
+
+    <ul id="ulList"> below are li's:
+        <li> Telugu </li>
+        <li id="engLang"> English </li>
+        <li> Kannada </li>
+        <li> Tamil </li>
+    </ul>
+
+    <input type="text" id="toUpper">
+
+    <!-- https://www.youtube.com/watch?v=pKzf80F3O0U -->
+    <!-- https://www.youtube.com/watch?v=3KJI1WZGDrg&t=910s -->
+    
+
+
+</body>
+
+<script>
+
+    var pCheck = document.querySelector('.pText').addEventListener('click',(event)=>{
+        console.log('p text clicked !');
+        
+        
+    });
+
+    var ulList = document.querySelector('#ulList').addEventListener('click',(event)=>{
+        //console.log(event);
+       // console.log(event.type);
+
+       console.log('clicked');
+
+       console.log(event.target);
+       
+       
+
+        if(event.target.matches('li')){
+            event.target.style.backgroundColor = 'red';
+        }
+
+        // or
+
+        if(event.target.id === 'engLang'){
+            event.target.style.backgroundColor = 'green';
+        }
+
+        // or
+
+        console.log(window);
+        
+        console.log(window.location.href);
+        
+        window.location.href = window.location.href + '/'+ event.target.id;
+        
+    });
+
+    var engLang = document.querySelector('#engLang').addEventListener('click',(event)=>{
+        console.log(event);
+        console.log('eng clicked !');
+       // event.stopPropagation();
+        
+    });
+
+    var toUpper = document.getElementById('toUpper').addEventListener('keyup',(e)=>{
+    //    console.log(e.target.value);
+
+    e.target.value = e.target.value.toUpperCase();
+
+    console.log(e.target.value);
+    
+       
+    });
+
+    // console.log(toUpper);
+    
+
+
+</script>
+
+</html>
