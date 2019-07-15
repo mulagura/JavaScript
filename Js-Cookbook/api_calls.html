@@ -17,11 +17,13 @@
 </body>
 <script>
 
+    // 1. ajax way
 // new XMLHttpRequest(); The constructor initializes an XMLHttpRequest. 
                            //It must be called before any other method calls.
 // XMLHttpRequest.open(); Initializes a request
 // XMLHttpRequest.send(); Sends the request. If the request is asynchronous (which is the default), 
                           //this method returns as soon as the request is sent.
+// XMLHttpRequest.onload ; //                           
 // XMLHttpRequest.onreadystatechange ; An EventHandler that is called whenever the readyState attribute changes.
 // XMLHttpRequest.readyState ; Returns the state of the request ( 0-4 ). 4-> done, 3->loading, ..
 // XMLHttpRequest.status ;  returns the numerical HTTP status code ( 100 - 500 ); 
@@ -31,38 +33,35 @@
     function getDataAjax(){
 
         var usersData;
-        var http = new XMLHttpRequest();
 
-        http.onreadystatechange = (e)=>
+        var http = new XMLHttpRequest();
+        var usersUrl = 'https://jsonplaceholder.typicode.com/users';
+        http.open('GET',usersUrl, true); //  false makes synchronous; true asynchronous
+
+        http.onload = (e)=>
         {
             //console.log(e);
-            
+
                 if(http.readyState === 4 && http.status === 200){
-                    // console.log(usersData);
+
+                    alert(http.responseText);
                     
-                    //alert(usersData) // undefined
-                    usersData=  http.responseText;
-                      //alert(usersData) // data
+                    //usersData=  http.responseText;
+                   
                 }
                 
         };
-
-        var usersUrl = 'https://jsonplaceholder.typicode.com/users';
-        http.open('GET',usersUrl, false); //  false makes synchronous
+        
         http.send();
-
-        console.log(usersData);
-        
-        
-            
-        
+               
     }
+
+    // 2. es6 .fetch() way
+
 
     function getDataES6(){
 
+
     }
-
-
-
 </script>
 </html>
