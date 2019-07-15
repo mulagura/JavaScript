@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> API call </title>
+</head>
+<body>
+
+    <!-- 1. ajax way
+    2. fetch (es6) -->
+
+    <button onclick="getDataAjax()"> click for AJAX </button>
+    <button onclick="getDataES6()"> click for ES6 way </button>
+    
+</body>
+<script>
+
+// new XMLHttpRequest(); The constructor initializes an XMLHttpRequest. 
+                           //It must be called before any other method calls.
+// XMLHttpRequest.open(); Initializes a request
+// XMLHttpRequest.send(); Sends the request. If the request is asynchronous (which is the default), 
+                          //this method returns as soon as the request is sent.
+// XMLHttpRequest.onreadystatechange ; An EventHandler that is called whenever the readyState attribute changes.
+// XMLHttpRequest.readyState ; Returns the state of the request ( 0-4 ). 4-> done, 3->loading, ..
+// XMLHttpRequest.status ;  returns the numerical HTTP status code ( 100 - 500 ); 
+                            // 100 information responses, 200 successfull, 300 redirection msgs, 400 client error, 500 server error                          
+// XMLHttpRequest.responseText ;  returns the text received from a server which is DOMString.
+
+    function getDataAjax(){
+
+        var usersData;
+        var http = new XMLHttpRequest();
+
+        http.onreadystatechange = (e)=>
+        {
+            //console.log(e);
+            
+                if(http.readyState === 4 && http.status === 200){
+                    // console.log(usersData);
+                    
+                    //alert(usersData) // undefined
+                    usersData=  http.responseText;
+                      //alert(usersData) // data
+                }
+                
+        };
+
+        var usersUrl = 'https://jsonplaceholder.typicode.com/users';
+        http.open('GET',usersUrl, false); //  false makes synchronous
+        http.send();
+
+        console.log(usersData);
+        
+        
+            
+        
+    }
+
+    function getDataES6(){
+
+    }
+
+
+
+</script>
+</html>
