@@ -13,10 +13,30 @@
 
     <button onclick="getDataAjax()"> click for AJAX </button>
     <button onclick="getDataES6()"> click for ES6 way </button>
+
+    <p id="firstUser"></p>
+
+    <table>
+
+        <thead>
+                <tr>
+                        <th> User Name </th>
+                        <th> Email </th>
+                </tr>
+        </thead>
+        <tbody>
+
+                <tr id="dataTr">
+                    
+                </tr>
+        </tbody>
+
+        
+    </table>
     
 </body>
-<script>
 
+<script>
     // 1. ajax way
 // new XMLHttpRequest(); The constructor initializes an XMLHttpRequest. 
                            //It must be called before any other method calls.
@@ -30,10 +50,57 @@
                             // 100 information responses, 200 successfull, 300 redirection msgs, 400 client error, 500 server error                          
 // XMLHttpRequest.responseText ;  returns the text received from a server which is DOMString.
 
+// get 
+        /* var http = new XMLHttpRequest();
+        var usersUrl = 'https://jsonplaceholder.typicode.com/users';
+        http.open('GET',usersUrl, true);
+
+        http.onload = (event)=>{
+            if(http.readyState === 4 && http.status === 200){
+                var data = JSON.parse(http.responseText); // parse from string 
+            }
+            else{
+                    console.log('no data and status code is:->',http.status);   
+                }
+        } // onload
+
+        http.onerror = (event)=>{
+         console.log("an error occured!");
+        }
+
+        http.send(); */
+
+// post
+
+   /*     var http = new XMLHttpRequest();
+        var usersUrl = 'https://jsonplaceholder.typicode.com/users';
+        var params = 'orem=ipsum&name=binny';
+        http.open('POST',usersUrl, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onload = (event)=>{
+            if(http.readyState === 4 && http.status === 200){
+                var data = JSON.parse(http.responseText); // parse from string 
+            }
+            else{
+                    console.log('no data and status code is:->',http.status);   
+                }
+        } // onload
+
+        http.onerror = (event)=>{
+         console.log("an error occured!");
+        }
+
+        http.send(params); */
+
+
+
+
+
     function getDataAjax(){
-
-        var usersData;
-
+        
         var http = new XMLHttpRequest();
         var usersUrl = 'https://jsonplaceholder.typicode.com/users';
         http.open('GET',usersUrl, true); //  false makes synchronous; true asynchronous
@@ -41,24 +108,82 @@
         http.onload = (e)=>
         {
             //console.log(e);
-
                 if(http.readyState === 4 && http.status === 200){
 
-                    alert(http.responseText);
+                    // var usersData = http.responseText;
+                    var usersData =  JSON.parse(http.responseText);
                     
-                    //usersData=  http.responseText;
+                    console.log(usersData);
+                    console.table(usersData);
+                    console.log(Array.isArray(usersData)); // true
+
+                   // var firstUser = document.getElementById('firstUser').innerHTML = usersData[0].name; // only first user
+                    var userNames= [];
+                    var email = [];
+                    var usersDataLength = usersData.length;  
+                     
+                    for(var i=0;i<usersDataLength;i++){
+                        if(usersData[i].username && usersData[i].email){
+                            userNames.push(usersData[i].username);
+                            email.push(usersData[i].email);
+                        }
+                        else{
+                            return 0;
+                        }
+                        // if(usersData[i].username && usersData[i].email){
+
+                        // var td = document.createElement('td');
+                        // td.innerHTML = usersData[i].username;
+                        // document.getElementById('dataTr').appendChild(td);
+
+                        // // var tdEmail = document.createElement('td');
+                        // // tdEmail.innerHTML = usersData[i].email;
+                        // // document.getElementById('dataTr').appendChild(tdEmail);
+
+                        // }
+                        // else{
+                        //     return 0;
+                        // }
+
+                    }
+
+                    // // userNames.forEach()
+                    // userNames.map((d,i)=>{
+                    //     var td = document.createElement('td');
+                    //     td.innerHTML = usersData[i].username;
+                    //     document.getElementById('dataTr').appendChild(td);
+                    // })
+
+                    console.log(userNames);
+                    
                    
+                   
+                }
+                else{
+                    console.log('no ',http.status);
+                    
                 }
                 
         };
-        
-        http.send();
+
+        http.onerror = ()=>{
+         console.log("an error occured!");
+        }
+
+
+        http.send();        
                
     }
 
+    //console.log(usersData);
+    
+
+
     // 2. es6 .fetch() way
 
-
+// etch API uses Promises
+//
+    
     function getDataES6(){
 
 
