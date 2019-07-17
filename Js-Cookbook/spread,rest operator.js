@@ -40,7 +40,7 @@ console.log(all); // ["Chittoor", "palamaneru", "Madanapalle", "Bengaluru", "Che
 let obj1 = {a:1,b:2};
 let duplicate = {...obj1}; 
 console.log(duplicate); // {a: 1, b: 2}
-let duplicate2 = obj1;  // its not a copy , its just a reference
+let duplicate2 = obj1;  // its a copy , not a reference
 console.log(duplicate2); // {a: 1, b: 2}
 
         // rest operator
