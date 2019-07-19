@@ -9,7 +9,7 @@
 <body>
 
     <!-- 1. ajax way
-    2. fetch (es6) -->
+         2. fetch (es6)   -->
 
     <button onclick="getDataAjax()"> click for AJAX </button>
     <button onclick="getDataES6()"> click for ES6 way </button>
@@ -49,15 +49,12 @@
 // XMLHttpRequest.status ;  returns the numerical HTTP status code ( 100 - 500 ); 
                             // 100 information responses, 200 successfull, 300 redirection msgs, 400 client error, 500 server error                          
 // XMLHttpRequest.responseText ;  returns the text received from a server which is DOMString.
-
 // https://www.youtube.com/watch?v=82hnvUYY6QA
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-
 // get 
         /* var http = new XMLHttpRequest();
         var usersUrl = 'https://jsonplaceholder.typicode.com/users';
         http.open('GET',usersUrl, true);
-
         http.onload = (event)=>{
             if(http.readyState === 4 && http.status === 200){
                 var data = JSON.parse(http.responseText); // parse from string 
@@ -66,23 +63,17 @@
                     console.log('no data and status code is:->',http.status);   
                 }
         } // onload
-
         http.onerror = (event)=>{
          console.log("an error occured!");
         }
-
         http.send(); */
-
 // post
-
    /*     var http = new XMLHttpRequest();
         var usersUrl = 'https://jsonplaceholder.typicode.com/users';
         var params = 'orem=ipsum&name=binny';
         http.open('POST',usersUrl, true);
-
         //Send the proper header information along with the request
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
         http.onload = (event)=>{
             if(http.readyState === 4 && http.status === 200){
                 var data = JSON.parse(http.responseText); // parse from string 
@@ -91,35 +82,25 @@
                     console.log('no data and status code is:->',http.status);   
                 }
         } // onload
-
         http.onerror = (event)=>{
          console.log("an error occured!");
         }
-
         http.send(params); */
-
-
-
-
-
     function getDataAjax(){
         
         var http = new XMLHttpRequest();
         var usersUrl = 'https://jsonplaceholder.typicode.com/users';
         http.open('GET',usersUrl, true); //  false makes synchronous; true asynchronous
-
         http.onload = (e)=>
         {
             //console.log(e);
                 if(http.readyState === 4 && http.status === 200){
-
                     // var usersData = http.responseText;
                     var usersData =  JSON.parse(http.responseText);
                     
                     console.log(usersData);
                     console.table(usersData);
                     console.log(Array.isArray(usersData)); // true
-
                    // var firstUser = document.getElementById('firstUser').innerHTML = usersData[0].name; // only first user
                     var userNames= [];
                     var email = [];
@@ -134,29 +115,23 @@
                             return 0;
                         }
                         // if(usersData[i].username && usersData[i].email){
-
                         // var td = document.createElement('td');
                         // td.innerHTML = usersData[i].username;
                         // document.getElementById('dataTr').appendChild(td);
-
                         // // var tdEmail = document.createElement('td');
                         // // tdEmail.innerHTML = usersData[i].email;
                         // // document.getElementById('dataTr').appendChild(tdEmail);
-
                         // }
                         // else{
                         //     return 0;
                         // }
-
                     }
-
                     // // userNames.forEach()
                     // userNames.map((d,i)=>{
                     //     var td = document.createElement('td');
                     //     td.innerHTML = usersData[i].username;
                     //     document.getElementById('dataTr').appendChild(td);
                     // })
-
                     console.log(userNames);
                     
                    
@@ -168,28 +143,28 @@
                 }
                 
         };
-
         http.onerror = ()=>{
          console.log("an error occured!");
         }
-
-
         http.send();        
                
     }
-
     //console.log(usersData);
     
-
-
     // 2. es6 .fetch() way
 // https://www.youtube.com/watch?v=Oive66jrwBs&t=785s
-// etch API uses Promises
-// 
+// fetch API uses Promises
+// https://www.sitepoint.com/introduction-to-the-fetch-api/
 
     function getDataES6(){
 
-
+        fetch('https://www.reddit.com/r/javascript/top/.json?limit=5')
+        .then(response=>{
+            console.log(response);
+            console.log(response.body.json());
+            
+        })
+      
     }
 </script>
 </html>
