@@ -1,5 +1,8 @@
 // sorting and Programs
 
+// https://www.youtube.com/watch?v=zVevl-K-m7Y
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
     const numbers = [1,3,5,-20,0,-10]; 
     const fruits = ['apple','Banana','Dragon fruit','carrots','citrus fruits'];
          
