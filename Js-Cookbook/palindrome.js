@@ -23,3 +23,5 @@ let lineResult = line.replace(/[^a-zA-Z0-9]+/gi,'').toLowerCase().split('').reve
 let specialResult = specialString.replace(/[\W_]/g,'').split('').reverse().join('');
         console.log(specialResult);
                 
+the longest palindrome in a specified string ??? or log all possilble palindome substrings in a string
+https://www.w3resource.com/javascript-exercises/javascript-function-exercise-27.php
