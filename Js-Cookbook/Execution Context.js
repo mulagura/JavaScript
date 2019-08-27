@@ -1,6 +1,9 @@
                             // Execution Context
 
 //  https://stackoverflow.com/questions/9384758/what-is-the-execution-context-in-javascript-exactly
+// https://www.youtube.com/watch?v=QyUFheng6J0&list=PLUw808JhbZ_00NkLbwKkoKvke8QDjO-3d&index=1
+// https://www.youtube.com/watch?v=jTGb4t31vCY
+
 
 b();
 console.log(a);
