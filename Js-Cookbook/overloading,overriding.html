@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    // func overloading
+    // https://www.youtube.com/watch?v=tYORbcT1OVQ
+
+    function foo(a,b){
+        console.log(a,b);
+        
+    }
+
+     function foo(a,b,c){
+        console.log(a,b,c);
+        
+    }
+
+     function foo(a,b,c,d){
+        console.log(a,b,c,d);
+        console.log(arguments[10]);
+        
+        
+    }
+
+    foo(10,20,1,2,3);
+
+// inheritance and overriding
+
+// https://www.youtube.com/watch?v=kIw7lAsAgzE
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor
+// https://stackoverflow.com/questions/11480186/achieve-inheritance-using-object-literal-in-javascript
+// https://j201.github.io/posts/2013-06-22-JS-Object-Literal-Inheritance.html
+
+class Game {
+
+    constructor(player,country){
+        this.player = player;
+        this.country - country;
+    }
+
+    makeSweat(){
+        console.log('sweating player name:'+ this.player);
+    }
+
+    makeFit(){
+
+        console.log('fit:->',this.player);
+        
+    }
+
+}
+
+class Olympics extends Game{
+
+    constructor(player,country){
+        super(player,country);
+    }
+
+    // over riding
+
+    makeFit(){
+        console.log('fit in olympics class');
+    }
+
+}
+
+
+let badminton = new Game('mulagura','india');
+badminton.makeSweat();
+
+let tennis = new Olympics('ram','uk');
+tennis.makeFit(); // first with olympcs class it will check if present it overides the base one; else it logs base class
+
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
