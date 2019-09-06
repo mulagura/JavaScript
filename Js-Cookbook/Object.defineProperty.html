@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+
+// Object.defineProperty(obj,propsName,value/descriptor);
+// Property Descriptor
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+ 
+ // to make obj properties to be immutable we use defineProprty
+ // By default, values added using Object.defineProperty() are immutable.
+ // By default, props cant be enumerable means cant be iterated; enumerable defaults to true
+
+ // three properties: writable ( non-writable,cannot be reassigned ),enumerable,configurable
+
+
+let personObj = {
+
+    define:true
+};
+
+
+Object.defineProperty(personObj,'name',{
+    value:'ram mulagura',
+    writable: true,  // can assign different value which makes property mutable
+    enumerable:true,
+    configurable:true
+});
+
+personObj.name = 'mulagura';
+
+for(let key in personObj){
+    console.log(key,'val:->',personObj[key]);
+}
+
+
+
+</script>
+    
+</body>
+</html>
