@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Bubble sort </title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // SORTING
+
+        //  https://blog.bitsrc.io/a-guide-to-sorting-algorithms-in-javascript-5b32da4eae1e
+        //  https://github.com/rajatk16/javascript-sort 
+        
+        // https://blog.bitsrc.io/a-guide-to-sorting-algorithms-in-javascript-5b32da4eae1e
+        
+// https://github.com/rajatk16/javascript-sort/blob/master/bubbleSort.js
+// https://khan4019.github.io/front-end-Interview-Questions/sort.html
+// https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca
+// https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php
+// 
+
+        // bubble sort
+
+        // https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php
+
+        // can be achived by iteration 
+        // swapping
+        // 
+
+        function bubbleSort(arr) {
+            console.log('before sorted->', arr);
+            let arrLength = arr.length;
+            // console.log(arrLength);
+
+            var counterI = 0;
+            var counterJ = 0;
+
+            for (let i = 0; i < arrLength; i++) {
+                counterI++;
+
+                for (let j = 0; j < arrLength - 1; j++) {
+                    counterJ++;
+                    if (arr[i] > arr[i + 1]) {
+                        let temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                    }
+                    // else{
+                    //     return 0;
+                    // }
+                    console.log('j sorted', arr);
+                }
+
+                console.log('i sorted', arr);
+
+            }
+
+            console.log(' all sorted', arr);
+            console.log(counterI, counterJ);
+
+
+        }
+
+        bubbleSort([5, 1, 4, 2, 8]);
+
+        // 
+
+        function bubbleSort2(list) {
+            let swapped;
+            let n = list.length;
+            do {
+                swapped = false
+                for (let i = 0; i < n; i++) {
+                    // compare pairs of elements
+                    // if left element > right element, swap
+                    if (list[i] > list[i + 1]) {
+                        const temp = list[i];
+                        list[i] = list[i + 1];
+                        list[i + 1] = temp;
+                        swapped = true;
+                    }
+                }
+            }
+            // continue swapping until sorted
+            while (swapped) {
+                console.log('inside while');
+                return list;
+            }
+        }
+
+        const list = [5, 1, 4, 2, 8]
+
+        const sorted = bubbleSort2(list)
+
+        console.log(sorted)
+
+
+    </script>
+
+</body>
+
+</html>
