@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Merge Sort </title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        
+        // merge sort
+
+        // divide and conquer
+        // can be achived by recursion
+        
+
+// https://blog.bitsrc.io/a-guide-to-sorting-algorithms-in-javascript-5b32da4eae1e
+// https://github.com/rajatk16/javascript-sort/blob/master/bubbleSort.js
+// https://khan4019.github.io/front-end-Interview-Questions/sort.html
+// https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca
+// https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php
+// 
+
+        function divide(array) {
+            console.log('start divide --->', array);
+
+            if (array.length < 2) {
+                console.log('if length <2 ---->', array);
+
+                return array;
+            }
+            const mid = Math.floor(array.length / 2);
+            const left = array.slice(0, mid);
+            const right = array.slice(mid);
+
+            console.log('mid,left,right --->', mid, left, right);
+
+            return sort(divide(left), divide(right));
+        }
+
+        function sort(left, right) {
+            console.log('inside sort function: left,right -->>', left, right);
+
+            const sorted = []
+            while (left.length && right.length) {
+                if (left[0] <= right[0]) {
+                    sorted.push(left.shift());
+                    console.log('inside if :sorted->>', sorted);
+
+                } else {
+                    sorted.push(right.shift());
+                    console.log('inside else :sorted->>', sorted);
+                }
+            }
+            const output = [...sorted, ...left, ...right];
+            console.log('merge sort ->>', output);
+            return output;
+        }
+
+        const numbers = [4, 3, 5, 1, 2];
+        console.log(divide(numbers));
+
+
+
+    </script>
+
+</body>
+
+</html>
