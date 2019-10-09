@@ -14,21 +14,33 @@
 
     <script>
 
-        
+
         // merge sort
 
         // divide and conquer
         // can be achived by recursion
-        
 
-// https://blog.bitsrc.io/a-guide-to-sorting-algorithms-in-javascript-5b32da4eae1e
-// https://github.com/rajatk16/javascript-sort/blob/master/bubbleSort.js
-// https://khan4019.github.io/front-end-Interview-Questions/sort.html
-// https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca
-// https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php
-// 
+        // recursion
+        // fn add(n){
+        //     if(n<=0){
+        //         return n;
+        //     }
+        //     else{
+        //         return n + add(n-1);   // return 3 + add(2);   // return 3 + 2 + add(1);   // return 3+2+1+add(0) .......
+        // in recursion it saves in js execution stack and if it met some conditions its starting popping each
+        //     }
+        // }
 
-        function divide(array) {
+        // 
+
+        // https://blog.bitsrc.io/a-guide-to-sorting-algorithms-in-javascript-5b32da4eae1e
+        // https://github.com/rajatk16/javascript-sort/blob/master/bubbleSort.js
+        // https://khan4019.github.io/front-end-Interview-Questions/sort.html
+        // https://dev.to/wangonya/sorting-algorithms-with-javascript-part-1-4aca
+        // https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php
+        // 
+
+        function divideFn(array) {
             console.log('start divide --->', array);
 
             if (array.length < 2) {
@@ -42,10 +54,10 @@
 
             console.log('mid,left,right --->', mid, left, right);
 
-            return sort(divide(left), divide(right));
+            return sortFn(divideFn(left), divideFn(right));
         }
 
-        function sort(left, right) {
+        function sortFn(left, right) {
             console.log('inside sort function: left,right -->>', left, right);
 
             const sorted = []
@@ -56,19 +68,57 @@
 
                 } else {
                     sorted.push(right.shift());
+                    console.log('right shifted -->', right);
                     console.log('inside else :sorted->>', sorted);
                 }
             }
+            console.log('sorted->', sorted, 'left -->', left, 'right-->', right);
+
             const output = [...sorted, ...left, ...right];
             console.log('merge sort ->>', output);
             return output;
         }
 
         const numbers = [4, 3, 5, 1, 2];
-        console.log(divide(numbers));
+        console.log(divideFn(numbers));
 
 
+        // clean code
 
+        function divide(arr) {
+
+            if (arr.length < 2) {
+                return arr;
+            }
+
+            const mid = Math.floor(arr.length / 2);
+            const left = arr.slice(0, mid);
+            const right = arr.slice(mid);
+
+            return sort(divide(left), divide(right));
+        }
+
+        function sort(left, right) {
+
+            const sorted = [];
+
+            while (left.length && right.length) {
+                if (left[0] <= right[0]) {
+                    sorted.push(left.shift());
+                }
+                else {
+                    sorted.push(right.shift());
+                }
+            }
+
+            const output = [...sorted, ...left, ...right];
+
+            return output;
+        }
+
+
+        const toBeSorted = [1000, 1000, 100, 10, 1, 12321425, 5, 434534534, 55, 345, 345, 34, 545, 5345, 345, 34, 5];
+        console.log(divide(toBeSorted)); // [1, 5, 5, 10, 34, 34, 55, 100, 345, 345, 345, 545, 1000, 1000, 5345, 12321425, 434534534]
     </script>
 
 </body>
