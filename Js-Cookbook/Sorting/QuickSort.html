@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Quick Sort </title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+
+        // https://github.com/rajatk16/javascript-sort/blob/master/quickSort.js
+
+        function quick_Sort(origArray) {
+            if (origArray.length <= 1) {
+                return origArray;
+            } else {
+
+                var left = [];
+                var right = [];
+                var newArray = [];
+                var pivot = origArray.pop();
+
+                console.log('pivot value --->',pivot);
+                
+                var length = origArray.length;
+
+                for (var i = 0; i < length; i++) {
+                    if (origArray[i] <= pivot) {
+                        left.push(origArray[i]);
+                    } else {
+                        right.push(origArray[i]);
+                    }
+                }
+                
+                console.log('left --->',left);
+                console.log('right --->',right);
+                
+                
+                let toBeReturned = newArray.concat(quick_Sort(left), pivot, quick_Sort(right));
+               
+                console.log(toBeReturned);
+                
+                
+                return toBeReturned;
+
+                // return newArray.concat(quick_Sort(left), pivot, quick_Sort(right));
+            }
+        }
+
+console.time('quicksort');
+
+        var myArray = [4,3,5,1,2];
+
+        console.log("Sorted array: " +  quick_Sort(myArray));
+
+console.timeEnd('quicksort');
+
+    </script>
+
+</body>
+
+</html>
