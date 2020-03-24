@@ -11,12 +11,12 @@ var Employee = {
       first:"Internal Project",
       second:"Customer Project"
     },
-    nameNAge: function(){   // function
+    nameNAge: function(){   // method
       return "Employee name is:" + " " + Employee.name + " " + "and his age is:" + Employee.age;
     },  //use of Employye.name is ambigious because Consider that there could be another global variable
        // (that we might or might not be aware of) with the same name
 
-    nameNAge: function(){   // function
+    nameNAge: function(){   // method
       return "Employee name is:" + " " + this.name + " " + "and his age is:" + this.age;
     }//use this keyword because it refers to above obj
 };
