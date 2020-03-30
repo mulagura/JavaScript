@@ -1,4 +1,8 @@
                   // callbacks
+// https://www.geeksforgeeks.org/javascript-callbacks/
+// https://stackoverflow.com/questions/47720012/how-to-know-if-a-javascript-callback-is-synchronous-or-asynchronous/47720230
+
+// closures are callbacks
 
 // A callback function is a function passed into another function as an argument,
    // which is then invoked inside the outer function.
