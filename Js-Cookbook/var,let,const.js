@@ -13,7 +13,7 @@
 
 BIKE.cc = 154;
 
-console.log(BIKE); // 154
+console.log(BIKE.cc); // 154
 
 const YEARS = [2010,2012,2014,2015,2016,2018];
 YEARS.forEach((year,index,arr)=>{
