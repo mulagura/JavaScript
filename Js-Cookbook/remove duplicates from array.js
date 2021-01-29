@@ -1,36 +1,53 @@
 // https://levelup.gitconnected.com/7-ways-to-remove-duplicates-from-array-in-javascript-cea4144caf31
 
 
-//[1,2,3,1,5,2];
-//output: [1,2,3,5];
+let arr = [1,2,3,1,2,2];
+let arrLength = arr.length;
 
-let a = [1,2,3,1,5,2];
-let b = [];
-let lengthOfa = a.length;
+//M1
 
-for(let i=0;i<lengthOfa;i++){
-
-    if( b.indexOf(a[i]) === -1){
-        b.push(a[i]);
+let empty = [];
+for(let i=0;i<arrLength;i++){
+    if(empty.indexOf(arr[i]) === -1){
+        empty.push(arr[i]);
     }
-
 }
+console.log(empty);
 
-console.log(b);
+//M2
+
+let filtered = arr.filter((ele,indx,wholeArr)=>{
+    if( wholeArr.indexOf(ele) === indx ){
+        return ele;
+    }
+});
+
+console.log(filtered);
+
+//M3
+
+
+
+//M4
+
+let newSet = [... new Set(arr)];
+console.log(newSet);
+
+
 
 
 //Method 2
 
-console.log(a.sort());
+console.log(arr.sort());
 
-a.sort();
+arr.sort();
 let c = [];
 let _temp;
 
-for(let i=0;i<lengthOfa;i++){
-    if(a[i] !== _temp){
-        c.push(a[i]);
-        _temp = a[i];
+for(let i=0;i<arrLength;i++){
+    if(arr[i] !== _temp){
+        c.push(arr[i]);
+        _temp = arr[i];
     }
 }
 
