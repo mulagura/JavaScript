@@ -24,10 +24,6 @@ let filtered = arr.filter((ele,indx,wholeArr)=>{
 
 console.log(filtered);
 
-//M3
-
-
-
 //M4
 
 let newSet = [... new Set(arr)];
@@ -36,7 +32,7 @@ console.log(newSet);
 
 
 
-//Method 2
+//M3
 
 console.log(arr.sort());
 
