@@ -4,6 +4,8 @@
 let arr = [1,2,3,1,2,2];
 let arrLength = arr.length;
 
+--> using inlcudes,indexOf -1, filter, Set operator
+
 //M1
 
 let empty = [];
@@ -24,15 +26,24 @@ let filtered = arr.filter((ele,indx,wholeArr)=>{
 
 console.log(filtered);
 
+// M3
+
+let empty1 = [];
+for(let i=0;i<arrLength;i++){
+   if(empty1.includes(arr[i]) === false){
+       empty1.push(arr[i]);
+   }
+}
+console.log(empt1y);
+
+
 //M4
 
 let newSet = [... new Set(arr)];
 console.log(newSet);
 
 
-
-
-//M3
+//M5
 
 console.log(arr.sort());
 
