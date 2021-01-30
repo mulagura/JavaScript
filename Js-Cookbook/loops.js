@@ -48,7 +48,7 @@ console.log(log);
 // push and unshift return new length
 //pop and shift return poped item only
 
-//splice returns array containing deleted elements; if no element is removed ut returns empty array
+//splice returns array containing deleted elements; if no element is removed it returns empty array
 
 //Array.splice(startingIndex,deletecount,..items to be added);
 
