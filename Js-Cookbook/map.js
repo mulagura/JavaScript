@@ -22,7 +22,7 @@ console.log(names); // ['johnny depp','cage','aston','charlie','penny','sheldon'
 // https://codeburst.io/javascript-map-vs-foreach-f38111822c0f
 // https://stackoverflow.com/questions/34426458/javascript-difference-between-foreach-and-map
 
-// forEach doesn't return anything but affects the array;
+// forEach doesn't return anything but affects the array (using array index,but very poor practice;such cases use map);
 // forEach return statement will gives us undefined
 // forEach preferable when we dont want any change in original array
 // map gives new array,should have return statement
