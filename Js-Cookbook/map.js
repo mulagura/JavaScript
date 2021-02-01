@@ -39,3 +39,12 @@ var foreach = names.forEach((n,i)=>{
 console.log(names); // [ 'johnny depp', 'cage', 'aston', 'charlie', 'penny', 'sheldon' ]
 console.log(foreach); // undefined
 
+let arr = [1,2,3,4,5];
+let arrLength = arr.length;
+
+let amps = arr.map((ele,indx,arrr)=>{
+        return ele*2;
+});
+
+console.log(arr,amps); // [1, 2, 3, 4, 5]  [2, 4, 6, 8, 10]
+
