@@ -65,7 +65,7 @@ var splice3 = fruitArray.splice(0); // remove all from 0
 console.log(splice3); //  [ 'apple', 'peach', 'melon' ]
 console.log(fruitArray); // []
 
-// slice returns shallow copy of removed elements; does change the original array
+// slice returns shallow copy of removed elements; does not change the original array
 //Array.slice(begin,end) // end not included while slicing
 
 var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
