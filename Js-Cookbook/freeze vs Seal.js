@@ -11,6 +11,26 @@
 // obj: The object which should be sealed.
         //It can be a Function or other non-primitive value.
 
+let obj = {
+    a:'apple',
+    b:'banana'
+};
+
+Object.seal(obj);
+
+obj.c = 'citrus';
+obj.b = 'berry'
+
+console.log(delete obj.a,obj.c,obj.b,obj); // false undefined "berry" {a: "apple", b: "berry"}
+
+Object.freeze(obj);
+
+obj.c = 'citrus';
+obj.b = 'bluberry'
+
+console.log(delete obj.a,obj.c,obj.b,obj); // false undefined "banana" {a: "apple", b: "banana"}
+
+
 const mobile = {
     network:'Airtel',
     non_removable_battery:true,
