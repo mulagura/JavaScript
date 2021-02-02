@@ -1,6 +1,9 @@
 // 0,1 not prime
 // 2 is prime and all other even numbers are not prime
 // prime number is divisible by 1 and its own number only 
+
+// https://www.w3resource.com/javascript-exercises/javascript-function-exercise-8.php
+
 var counter = 0;
 var encounter = 0;
 var decounter =0;
