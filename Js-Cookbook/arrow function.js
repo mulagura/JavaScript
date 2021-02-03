@@ -1,4 +1,5 @@
 // arrow function
+// https://medium.com/better-programming/difference-between-regular-functions-and-arrow-functions-f65639aba256
 // // ()=>{};
 // basically these are anonymous functions
 // in normal function this keyword changes from context to context (function to function)
