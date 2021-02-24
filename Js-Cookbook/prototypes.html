@@ -17,6 +17,8 @@
 <!--     https://www.tutorialsteacher.com/javascript/prototype-in-javascript -->
 
 <!-- ref: https://www.youtube.com/playlist?list=PLqq-6Pq4lTTaflXUL0v3TSm86nodn0c_u -->
+    
+    
 
 </body>
 <script>
@@ -29,6 +31,10 @@ function Constructorfunc(x,y){
 
 var firstDiv = new Constructorfunc(100,500);
 var secondDiv = new Constructorfunc(1,20);
+    
+   <!-- let's say i want to add c property, we cant add using Constructorfunc.c; since it gives undefined, so prototypes required; Constructorfunc.prototype.c
+    let's say i have created firstDiv.d; avialble only on firstDiv, so it is mainting 2 sets, one in Constructorfunc and in firstDiv; we can genralize using firstDiv.__proto__.c
+    so firstDiv.__proto__ === Constructorfunc.prototype -->
 
 Constructorfunc.div = function(){
     return 'div';
