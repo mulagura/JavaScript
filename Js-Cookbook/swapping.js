@@ -11,6 +11,12 @@ console.log(x,y,'temp:'+temp);
 
 
 // swapping without third variable
+
+a=a+b;
+b=a-b;
+a=a-b;
+
+
 let a = 1;
 let b = 2;
 console.log(a,b);
