@@ -115,3 +115,4 @@ and so on
 since i is declared using var, when clog is called, the compiler finds the variable i in the nearest function block which is timer and since we have already reached the end of the for loop, i holds the value 6, and execute clog. That explains 6 being logged six times.
 
 */
+https://dmitripavlutin.com/javascript-closures-interview-questions/
