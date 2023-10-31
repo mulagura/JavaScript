@@ -32,7 +32,7 @@ console.log(YEARS); //   [2010, 2012, undefined, 2015, 2016, 2018]
 
    const Z = 'I Love Amul';
     Z = 'I dont love anymore';
-   console.log(z); // Assignment to constant variable  
+   console.log(z); // Error: Assignment to constant variable  
    const Z = 220;
    console.log(Z); // dentifier 'Z' has already been declared */
  
