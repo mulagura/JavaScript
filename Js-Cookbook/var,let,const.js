@@ -29,6 +29,7 @@ console.log(YEARS); //   [2010, 2012, undefined, 2015, 2016, 2018]
    // But you can NOT reassign a constant array:
    // For objects and arrays it can't be reassigned, but the contents can be changed 
    // const cannot be redeclared;
+// unlike var; Variables defined with const are not hoisted to the top.
 
    const Z = 'I Love Amul';
     Z = 'I dont love anymore';
