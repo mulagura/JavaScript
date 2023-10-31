@@ -34,7 +34,7 @@ console.log(YEARS); //   [2010, 2012, undefined, 2015, 2016, 2018]
     Z = 'I dont love anymore';
    console.log(z); // Error: Assignment to constant variable  
    const Z = 220;
-   console.log(Z); // dentifier 'Z' has already been declared */
+   console.log(Z); // Identifier 'Z' has already been declared */
  
    const CAR = {
        make:'skoda',
