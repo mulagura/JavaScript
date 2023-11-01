@@ -30,31 +30,11 @@ function sum(...args) {
 }
 console.log(sum(1, 2, 3)); // Outputs: 6
 
-Interview Questions:
-For Spread Operator:
-Explain the purpose of the Spread Operator (...) in JavaScript. Provide examples of how it's used with arrays and objects.
-How do you create a shallow copy of an array using the Spread Operator? What's the benefit of doing this?
-Can you merge two arrays using the Spread Operator? If so, provide an example.
-Describe a scenario where you might use the Spread Operator to merge objects. What are the advantages of using it in this context?
-For Rest Operator:
-What is the Rest Operator (...) in JavaScript, and where is it commonly used?
-In what context is the Rest Operator typically used, and how does it collect values into an array?
-Provide an example of a function that uses the Rest Operator to gather arguments into an array.
-How can you work with a variable number of arguments in a function without using the Rest Operator? Compare the two approaches.
-By understanding and explaining the differences between the Spread Operator and Rest Operator and demonstrating their practical applications, you'll showcase your knowledge of these important JavaScript concepts during interviews.
-
-
 
 In summary, the spread operator is used to split and copy iterables (arrays/objects) or merge them together, 
   whereas the rest operator is used to gather multiple function arguments into a single array. 
   While they both use the `...` syntax, their usage contexts and functionalities are different.
 
-
-var sumAll = (q,w,e,r,t)=>{
-    console.log(q+w+e+r+t);
-}
-
-sumAll(...oddNUmbers); // 25
 
 // in es6 arrow funcs are introduced , so apply > sumAll.apply(null,numbers);
 
