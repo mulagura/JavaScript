@@ -11,7 +11,7 @@ eg:
   // tdz
   console.log(a); // ReferenceError
   // but if we use var, it will be undifined, becaus of hoisting
-  // let and const have hoisting
+  // let and const can't / dont have hoisting
   let a;
   console.log(a); // undefined
 }
