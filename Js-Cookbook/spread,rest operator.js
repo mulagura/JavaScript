@@ -20,6 +20,21 @@ const originalObject = { a: 1, b: 2 };
 const copyObject = { ...originalObject }; // Shallow copy
 const mergedObject = { ...originalObject, c: 3, d: 4 }; // Merge objects
 
+spreading elements of one data structure to another 
+.................................................
+  const colorsArray = ['red', 'green', 'blue'];
+const colorsObject = { ...colorsArray };
+
+console.log(colorsObject); 
+// Output: { "0": "red", "1": "green", "2": "blue" }
+
+const str = 'Hello';
+const strToArray = [...str];
+
+console.log(strToArray);
+// Output: [ 'H', 'e', 'l', 'l', 'o' ]
+
+
 Rest Operator (...)
 The Rest Operator is used in function parameters to gather remaining arguments into an array. 
   It collects multiple values into a single array, making it easier to work with variable-length argument lists.
