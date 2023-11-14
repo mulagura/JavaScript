@@ -2,7 +2,7 @@
 // https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c                                  
 // forEach(callback);
 // map(callback) 
-// filter()
+// filter() https://www.digitalocean.com/community/tutorials/js-filter-array-method
 // reduce()
 // find()          
 // findIndex()                       
