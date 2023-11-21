@@ -1,0 +1,1 @@
+https://codedamn.com/news/javascript/async-and-defer-in-script-tag
