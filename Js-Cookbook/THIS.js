@@ -6,7 +6,9 @@
 // 'this' refers to the object that is executing current function/method
 // 'this' varies between strict mode('use strict') and non-strict mode
 // outside function the 'this' refers to global object / window object even in strict mode
-//  
+//  inside object, this refers to the object itself
+// inside object, if foreach callback function with function, this behaves like in function(ie. global/window)
+// but if it is arrow function, this refrs to the inherit from enclosing scope.
 
 // global 
 this.something = "Hi i am something";
@@ -90,3 +92,48 @@ console.log(window.something); // Hi i am something
     liquidObj.log();
 
     //solution: use var self = this; or use call/apply/bind; or use arrow functions
+
+// Certainly! In the provided code, there is an object named liquidObj with a method (function inside an object) called log. 
+// Inside the log method, there's a forEach loop that iterates through the elements of the types array. 
+// However, there's an issue with how this is being used inside the forEach loop.
+// When you use this inside a regular function (like the one inside forEach), 
+// it doesn't refer to the object it's a part of (liquidObj in this case). 
+// Instead, it refers to the global object (window in a browser environment).
+// So, when you try to access this.arePriceable inside the loop, it doesn't work as expected, 
+// and you get undefined. To solve this issue, you can use various approaches:
+
+// Using a Variable (self): You can store a reference to the outer this in a variable and use that variable inside the loop.
+
+var liquidObj = {
+    types: ['water', 'petrol', 'oil'],
+    arePriceable: true,
+    log() {
+        var self = this;
+        console.log(this.types, this.arePriceable);
+        this.types.forEach(function (type, indx, arr) {
+            console.log(type);
+            console.log(self.arePriceable);
+            console.log(self);
+        });
+    }
+};
+
+liquidObj.log();
+
+// Using Arrow Functions: Arrow functions don't have their own this. They inherit this from the enclosing scope, which makes them useful in this context.
+
+var liquidObj = {
+    types: ['water', 'petrol', 'oil'],
+    arePriceable: true,
+    log() {
+        console.log(this.types, this.arePriceable);
+        this.types.forEach((type, indx, arr) => {
+            console.log(type);
+            console.log(this.arePriceable);
+            console.log(this);
+        });
+    }
+};
+
+liquidObj.log();
+// These approaches ensure that this inside the loop still refers to the liquidObj object, allowing you to access its properties correctly.

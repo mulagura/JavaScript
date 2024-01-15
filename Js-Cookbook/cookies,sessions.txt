@@ -1,0 +1,34 @@
+https://techspawn.com/localstorage-session-storage-or-cookies-in-angular/
+
+In angular, ngx-cookie-service
+
+localStorage, sessionStorage, and cookies are all ways to store data on the client side, 
+but they have key differences in terms of lifespan, storage capacity, and scope.
+
+localStorage:
+Lifespan: Data stored in localStorage persists even after the browser is closed. It remains until explicitly cleared by the user or the application.
+Storage Capacity: Larger storage capacity compared to cookies (typically around 5 MB per domain).
+Scope: Data stored in localStorage is accessible across all tabs and windows for a particular domain.
+
+sessionStorage:
+Lifespan: Data stored in sessionStorage is only available for the duration of the page session. It gets cleared when the browser tab or window is closed.
+Storage Capacity: Similar to localStorage (typically around 5 MB per domain).
+Scope: Limited to the same tab or window where it was set. Data is not shared across tabs or windows.
+
+Cookies:
+Lifespan: Cookies have an expiration date that can be set. They can persist across browser sessions if a specific expiration date is set, otherwise, they exist only until the browser is closed (session cookies).
+Storage Capacity: Much smaller storage capacity compared to localStorage (typically around 4 KB per domain).
+Scope: Cookies are sent to the server with every HTTP request, which means they can be accessed by both the server and the client. 
+They are accessible across all tabs and windows for a particular domain.
+
+Use Cases:
+localStorage: Suitable for storing large amounts of data that need to persist across sessions, like user preferences or cached data.
+
+sessionStorage: Useful for storing temporary data that should be cleared when the user leaves a particular page or closes the browser.
+
+Cookies: Often used for managing user sessions, storing authentication tokens, and for small pieces of information that need to be sent with every HTTP request.
+
+Security Considerations:
+Cookies: Cookies have security features such as the Secure and HttpOnly flags, which enhance their security. However, they are susceptible to cross-site scripting (XSS) attacks.
+
+localStorage/sessionStorage: While these are not vulnerable to XSS attacks in the same way as cookies, they are accessible through JavaScript, so developers need to be cautious about storing sensitive information.
