@@ -1,0 +1,19 @@
+function findPairsWithSum(arr, targetSum) {
+    const result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === targetSum) {
+                result.push([arr[i], arr[j]]);
+            }
+        }
+    }
+
+    return result;
+}
+
+const arr1 = [1, 1, 2, 4, 4, 3, 5, 7, 3, 6];
+const targetSum = 7;
+
+const output = findPairsWithSum(arr1, targetSum);
+console.log(output); // Output: [ [ 1, 6 ], [ 4, 3 ] ]
