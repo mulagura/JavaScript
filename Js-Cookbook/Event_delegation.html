@@ -1,102 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> event delegation </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> Event delegation </title>
 </head>
-<style>
-
-    /* *{
-        padding: 0;
-        margin: 0;
-    } */
-
-    .pText{
-        background-color: grey;
-    }
-
-</style>
 
 <body>
 
-    <p class="pText"> some unordered list are follows: </p>
-
-    <ul id="ulList"> below are li's:
-        <li> Telugu </li>
-        <li id="engLang"> English </li>
-        <li> Kannada </li>
-        <li> Tamil </li>
+    <ul id="taskList">
+        <li id="task_1">Task 1</li>
+        <li id="task_2">Task 2</li>
+        <li id="task_3">Task 3</li>
     </ul>
 
-    <input type="text" id="toUpper">
-
-    <!-- https://www.youtube.com/watch?v=pKzf80F3O0U -->
+    <!-- Event delegation is a technique where a common ancestor is assigned a single event listener 
+         to manage a group of similar elements.   -->
     <!-- https://www.youtube.com/watch?v=3KJI1WZGDrg&t=910s -->
-    
-
 
 </body>
 
 <script>
 
-    var pCheck = document.querySelector('.pText').addEventListener('click',(event)=>{
-        console.log('p text clicked !');
-        
-        
-    });
-
-    var ulList = document.querySelector('#ulList').addEventListener('click',(event)=>{
-        //console.log(event);
-       // console.log(event.type);
-
-       console.log('clicked');
-
-       console.log(event.target);
-       
-       
-
-        if(event.target.matches('li')){
-            event.target.style.backgroundColor = 'red';
+    document.getElementById('taskList').addEventListener('click', function (event) {
+        // console.log(event.target);
+        if (event.target.tagName === 'LI') {
+            console.log('Clicked on ' + event.target.innerText);
+            event.target.style.backgroundColor = '#F4C430';
+            setTimeout(() => {
+                window.location.href = window.location.href + '/' + event.target.id;
+                console.log(window.location.href);
+            }, 1000);
         }
-
-        // or
-
-        if(event.target.id === 'engLang'){
-            event.target.style.backgroundColor = 'green';
-        }
-
-        // or
-
-        console.log(window);
-        
-        console.log(window.location.href);
-        
-        window.location.href = window.location.href + '/'+ event.target.id;
-        
     });
-
-    var engLang = document.querySelector('#engLang').addEventListener('click',(event)=>{
-        console.log(event);
-        console.log('eng clicked !');
-       // event.stopPropagation();
-        
-    });
-
-    var toUpper = document.getElementById('toUpper').addEventListener('keyup',(e)=>{
-    //    console.log(e.target.value);
-
-    e.target.value = e.target.value.toUpperCase();
-
-    console.log(e.target.value);
-    
-       
-    });
-
-    // console.log(toUpper);
-    
-
 
 </script>
 
