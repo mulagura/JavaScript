@@ -1,0 +1,111 @@
+https://github.com/lydiahallie/javascript-questions
+
+https://medium.com/beginners-guide-to-mobile-web-development/everything-you-need-to-know-about-es6-arrow-functions-and-lexical-this-19cce1a49bdf
+
+https://tylermcginnis.com/arrow-functions/
+
+https://toddmotto.com/es6-arrow-functions-syntaxes-and-lexical-scoping/
+
+https://derickbailey.com/2015/09/28/do-es6-arrow-functions-really-solve-this-in-javascript/
+
+https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26
+
+https://stackoverflow.com/questions/37231841/beginner-javascript-oop-vs-functional
+
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0
+http://funkyjavascript.com/procedural-vs-object-oriented-vs-functional-programming/
+https://blog.learningtree.com/functional-programming-object-orientated-programming/
+
+https://stackoverflow.com/questions/21607692/understanding-the-event-loop
+
+// Observables
+https://stackoverflow.com/questions/42342781/why-should-we-use-subscribe-over-map-in-angular2
+https://stackoverflow.com/questions/37364973/angular-promise-vs-observable
+https://www.youtube.com/watch?v=mSV0AihITxo
+https://www.youtube.com/watch?v=JFx3amVu1Yg
+
+https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Question/blob/master/README.md
+
+https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z
+
+https://stackoverflow.com/questions/2272902/make-this-syntax-possible-var-a-add23-5
+
+https://www.toptal.com/javascript/interview-questions
+
+http://nishant8bits.github.io/2015/10/22/21-Essential-JavaScript-Interview-Questions/
+
+https://www.webcodegeeks.com/javascript/javascript-interview-questions-answers/
+
+https://www.webcodegeeks.com/wp-content/uploads/2016/01/JavaScript-Interview-Questions.pdf
+
+http://help.dottoro.com/ljgecwtw.php
+
+http://liuhao.im/english/2016/11/11/some-brain-burning-javascript-questions.html
+
+for in vs for of
+https://www.youtube.com/watch?v=bDt--Mtj094
+https://www.youtube.com/watch?v=a3KHBqH7njs&t=11s
+lets learn by ryan chritiani
+
+indexOf,lastIndexOf //string and array
+https://www.youtube.com/watch?v=xdziI2avnZ4
+push,pop,shift,unshift
+
+string methods
+https://www.youtube.com/watch?v=VRz0nbax0uI
+array methods
+https://www.youtube.com/watch?v=MeZVVxLn26E
+
+set
+https://www.youtube.com/watch?v=mzlIYyY6he4
+
+ES6
+The net Ninja(regex and stuff)
+window object vs document object
+http://eligeske.com/jquery/what-is-the-difference-between-document-and-window-objects-2/
+primitive vs non-primitive
+https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0
+bracket vs dot notation
+https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781
+seal vs freeze vs preventExtensions
+https://github.com/piecioshka/test-freeze-vs-seal-vs-preventExtensions
+
+box-sizing:border-box
+https://www.youtube.com/results?search_query=box+sizing+border+box+css
+
+
+prototypes
+
+https://www.youtube.com/watch?v=fBpPfPjxOhc&list=PLqq-6Pq4lTTaflXUL0v3TSm86nodn0c_u
+
+closures and scoping in js
+
+https://www.youtube.com/watch?v=O312eN5J2bc&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c
+
+
+regex
+https://www.youtube.com/watch?v=r6I-Ahc0HB4&list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD
+
+
+http status codes
+https://www.tutorialspoint.com/http/http_status_codes.htm
+
+REST API (Representational State Transfer Application Programming Interface)
+https://www.youtube.com/watch?v=7YcW25PHnAA
+
+HTTP methods
+
+
+JSON
+
+
+REST API
+https://www.youtube.com/watch?v=BRdcRFvuqsE&list=PL4cUxeGkcC9jBcybHMTIia56aV21o2cZ8
+
+Postman workout=> headers,response,body; API network-oAuth  
+https://www.youtube.com/watch?v=t5n07Ybz7yI
+
+post VS put
+PUT    /items/1      #=> update
+POST   /items        #=> create
+https://www.youtube.com/watch?v=rhTkRK53XdQ&t=176s
