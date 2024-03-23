@@ -1,0 +1,323 @@
+JS Interview Q&A
+
+https://www.webcodegeeks.com/wp-content/uploads/2016/01/JavaScript-Interview-Questions.pdf
+
+https://github.com/sudheerj/javascript-interview-questions
+
+https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Question/blob/master/README.md
+
+JS Exercises
+⦁	https://www.maxpou.fr/js-exercises-explained
+⦁	https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29
+⦁	https://github.com/kennymkchan/interview-questions-in-javascript
+⦁	 https://www.toptal.com/javascript/interview-questions
+⦁	 https://www.codementor.io/nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z
+⦁	 https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions
+⦁	http://liuhao.im/english/2016/11/11/some-brain-burning-javascript-questions.html
+
+
+OOPS
+https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/
+
+where to use script tag / and async,defer usage
+https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+
+
+https://stackoverflow.com/questions/37231841/beginner-javascript-oop-vs-functional
+
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0
+http://funkyjavascript.com/procedural-vs-object-oriented-vs-functional-programming/
+https://blog.learningtree.com/functional-programming-object-orientated-programming/
+
+https://stackoverflow.com/questions/21607692/understanding-the-event-loop
+
+https://www.quora.com/Whats-the-difference-between-git-pulland-git-fetch
+
+https://stackoverflow.com/questions/2272902/make-this-syntax-possible-var-a-add23-5
+
+
+https://hackernoon.com/js-var-let-or-const-67e51dbb716f 
+https://dzone.com/articles/javascript-difference-between-var-let-and-const-ke
+http://vegibit.com/es6-let-vs-var-vs-const/ 
+
+
+recursion
+https://www.sitepoint.com/recursion-functional-javascript/
+
+fun dec vs fun exp
+https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
+
+callbacks
+http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
+https://stackoverflow.com/questions/2070275/what-are-closures-and-callbacks
+https://www.youtube.com/watch?v=RU-QXuhOSy0&index=21&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c
+
+closures and scoping in js
+
+https://www.youtube.com/watch?v=O312eN5J2bc&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c
+
+
+prototypes
+
+https://www.youtube.com/watch?v=fBpPfPjxOhc&list=PLqq-6Pq4lTTaflXUL0v3TSm86nodn0c_u
+
+
+
+https://stackoverflow.com/questions/705173/what-is-meant-by-first-class-object 
+
+
+
+https://codehandbook.org/how-to-remove-duplicates-from-javascript-array/ 
+
+
+
+
+overrdiing vs overloading in JS?
+https://stackoverflow.com/questions/34336995/overloading-vs-overriding-in-javascript
+
+fetch https://itnext.io/that-data-looks-so-fetching-on-you-understanding-the-js-fetch-api-880eae0c8d25
+
+https://medium.com/beginners-guide-to-mobile-web-development/everything-you-need-to-know-about-es6-arrow-functions-and-lexical-this-19cce1a49bdf
+
+https://tylermcginnis.com/arrow-functions/
+
+https://toddmotto.com/es6-arrow-functions-syntaxes-and-lexical-scoping/
+
+https://derickbailey.com/2015/09/28/do-es6-arrow-functions-really-solve-this-in-javascript/
+
+https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26
+
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0
+http://funkyjavascript.com/procedural-vs-object-oriented-vs-functional-programming/
+https://blog.learningtree.com/functional-programming-object-orientated-programming/
+
+for in vs for of
+https://www.youtube.com/watch?v=bDt--Mtj094
+https://www.youtube.com/watch?v=a3KHBqH7njs&t=11s
+lets learn by ryan chritiani
+
+indexOf,lastIndexOf //string and array
+https://www.youtube.com/watch?v=xdziI2avnZ4
+push,pop,shift,unshift
+
+string methods
+https://www.youtube.com/watch?v=VRz0nbax0uI
+array methods
+https://www.youtube.com/watch?v=MeZVVxLn26E
+
+set
+https://www.youtube.com/watch?v=mzlIYyY6he4
+
+ES6
+The net Ninja(regex and stuff)
+window object vs document object
+http://eligeske.com/jquery/what-is-the-difference-between-document-and-window-objects-2/
+primitive vs non-primitive
+https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0
+bracket vs dot notation
+https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781
+seal vs freeze vs preventExtensions
+https://github.com/piecioshka/test-freeze-vs-seal-vs-preventExtensions
+
+
+https://medium.com/beginners-guide-to-mobile-web-development/everything-you-need-to-know-about-es6-arrow-functions-and-lexical-this-19cce1a49bdf
+
+https://tylermcginnis.com/arrow-functions/
+
+https://toddmotto.com/es6-arrow-functions-syntaxes-and-lexical-scoping/
+
+https://derickbailey.com/2015/09/28/do-es6-arrow-functions-really-solve-this-in-javascript/
+
+https://medium.freecodecamp.org/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26
+
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0
+http://funkyjavascript.com/procedural-vs-object-oriented-vs-functional-programming/
+https://blog.learningtree.com/functional-programming-object-orientated-programming/
+
+window object vs document object
+http://eligeske.com/jquery/what-is-the-difference-between-document-and-window-objects-2/
+
+primitive vs non-primitive
+https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0
+
+bracket vs dot notation
+https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781
+
+seal vs freeze vs preventExtensions
+https://github.com/piecioshka/test-freeze-vs-seal-vs-preventExtensions
+
+regex
+https://www.youtube.com/watch?v=r6I-Ahc0HB4&list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD
+
+
+http status codes
+https://www.tutorialspoint.com/http/http_status_codes.htm
+
+REST API (Representational State Transfer Application Programming Interface)
+https://www.youtube.com/watch?v=7YcW25PHnAA
+
+
+REST API
+https://www.youtube.com/watch?v=BRdcRFvuqsE&list=PL4cUxeGkcC9jBcybHMTIia56aV21o2cZ8
+
+Postman workout=> headers,response,body; API network-oAuth  
+https://www.youtube.com/watch?v=t5n07Ybz7yI
+
+post VS put
+PUT    /items/1      #=> update
+POST   /items        #=> create
+https://www.youtube.com/watch?v=rhTkRK53XdQ&t=176s
+
+.....................................................................................................
+JavaScript
+
+6.  write a program to reverse?
+7.  remove duplicates in JS array
+8.  push,pop,shift,unshift,delete
+9.  fibanocci
+10. validation using RegExp
+11. palindrome
+12. even or odd or prime
+13. empty an array
+14. while loop
+
+How to find duplicates in array?
+Design pattern in JavaScript?
+
+What is Event Bubbling?
+
+What are the ways to create object in JavaScript?
+
+
+how did you organize your javascript file?
+
+how javascript file was structured?
+
+how did you load the javascript file? did you separate it into modules?
+
+Modular pattern in javascript?
+
+undefined and not defined?
+
+what is the drawback in javascript to make a function really private?
+
+what kind of drawback in browser?
+
+in javascript, NPI data should be stored in what type of variable?
+string
+
+why would not you use number for npi data?
+
+what is function hoisting in javascript?
+
+How is the variable passed -pass by value or reference in javascript?
+
+if an object is created in global scope and passed, if an attribute is modified, would the value change?
+
+how can we make a copy of an object in javascript?
+
+what is global namespace attached to? what does that mean?
+
+how can you make javascript synchronous? 
+
+Datatypes in javascript
+
+
+diff btwn null and undefined
+
+diff between == and ===
+
+Explain about closures
+
+Explain about modular pattern
+
+
+
+diffrnce btwn setInterval and setTimeout
+
+How to make synchronous call in Javascript
+
+1.	Object Oriented Javascript & concepts
+2.	ES6 Standards 
+
+
+
+try catch and finally in js?
+
+JS – difference between = and == and === ? --- answer ok 
+-	JS  - what is “this” keyword referred to ?  --- answer doubtful 
+
+How do you connect to a backend REST service ? --- answer not very good … 
+
+Have u consumed any REST API in JSON format  ---- answer ok but not very confident ..
+
+25.	Console log 1>2>3 what will be the output in javascript?
+26.	Javascript rate your knowledge
+27.	Basic datatypes of javascript
+28.	Tell me about primitive datatypes
+29.	Null and undefined same?
+
+31.	Tell me about “this ” in js
+32.	Can we use “this” on button click?
+33.	Difference between call, apply and blind
+34.	Tell me about local variables in js 6
+35.	Disadvantage of local variables
+36.	How to break infinite for loop (synchronous loop)?
+Do you have knowledge in js prototype, function and all? – 
+•	Where do you write function in constructor or prototype? 
+•	Why to write function in constructor and not in prototype? 
+•	What to do in order to make delay in a method? 
+•	Give syntax for timeout 
+•	What happens during timeout delay? - 
+•	Do you have knowledge of async programming? 
+
+Tell me about spread operator?
+Difference between document.ready and window.load. Which will execute first and which will execute at end?
+
+
+
+Difference between Typescript and Javascript
+
+how is the variable passed pass by value or pass by reference
+
+how can we make a copy of an object
+
+Simulate OOO programming in JavaScript like [classes, objects , visibility identifiers like private, public etc… ] –   
+
+8)	Difference between function and function expression –   
+
+9)	Concept of immediately invoke function expression – partially   
+
+10)	What is semantics of having braces () in the function expression and how does the browser engine recognize –   
+
+Ways of managing objects -   
+
+What is bind, apply, call with respect to functions?
+4.	What are the variable types in JavaScript.
+5.	Difference between undefined and null.
+6.	Difference between == and ===
+7.	What is chaining.
+8.	How do you loop array or objects. Give some 2 to 3 functions available.
+9.	Ajax - it's syntax, its properties (like data, type, datatype, async, cache) and when Success, error, complete block will execute.
+10.	How do u create objects.
+11.	How will you delete a property in object.
+12.	Event bubbling and propagation. How you stop it.
+13.	What is prototype in objects and its use.
+
+
+Eventing – Publishing, Subscribing in javascript.
+
+29.	function hoisting
+30.	variable hoisting
+
+
+3.	What is MVC pattern? How it is implemented in UI, Javascript side? What code goes into model, view, controller files?
+4.	What is Map, WeakMap in javascript? What’s it used for and how it is used? Example
+5.	How do you loop through objects(JSON or arrays)
+6.	What is arrow function? How and why it is used?
+7.	What is prototype in object? When it’s used? And how it is used for inheritance ?
+
+
+10.	What are promises and how are they used? Multiple promises how are they chained?
+
+11. How can we make ajax request?
