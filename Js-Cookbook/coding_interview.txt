@@ -1,0 +1,56 @@
+var arr = [22,45,77,15,90,24,87];
+ 
+first max and second max
+ 
+var arr = [2,4,5,8,9,3,5,6,4,2];
+unique array
+ 
+var arr = [9,8,7,11,12,22,3];
+sort 
+ 
+var a = 10;
+var b=20;
+swap
+ 
+const arr = [1, 2, 3, 4, 5];
+ 
+for (var i = 0; i < arr.length; i++) {
+
+  setTimeout(function () {
+
+    console.log(i);
+
+  }, 1000);
+
+}
+
+ 
+console.log('start');
+ 
+  setTimeout(function () {
+
+    console.log('settimeout');
+
+  }, 1000);
+ 
+promisecall(){
+console.log('promise')
+}
+ 
+console.log('end');
+ 
+var a =10;
+console.log(a);
+ 
+ 
+console.log(a);
+var a =10;
+ 
+ 
+console.log(a);
+let a =10;
+ 
+const a;
+a=10;
+console.log(a);
+ 
